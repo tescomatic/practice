@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	 <meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="js/jquery-ui/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="js/jquery-ui/jquery-ui.theme.css">
+	<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript">
+		
+	var fval="";
+	var opHolder="";
+	var opClick=false;
+
+	
+
+	function btnplus()
+	{
+		
+		if(fval == "")
+		{
+			fval = document.getElementById("disp").value ;
+
+
+		}
+		opHolder = "+" ;
+		opClick= true ;	
+	}
+	
+	function btnequals()
+	{
+		var ans ;
+			switch (opHolder)
+		{
+			case "+"	:
+			{
+				ans = parseFloat(fval) + parseFloat(document.getElementById("disp").value);
+				break;
+			}
+		}
+		document.getElementById("disp").value = ans ;
+		oClick = true ;
+		opHolder = "" ;
+		fval = "" ;
+	}
+	
+		
+	function btnone()
+	{
+		if(opClick == true)
+		
+		{
+			document.getElementById("disp").value = 1;
+			opClick = false ;
+		}
+		else
+		{
+			
+			document.getElementById("disp").value += 1 ;
+		}
+	}
+
+
+	function btntwo()
+	{
+		document.getElementById("disp").value +=2;
+	}
+
+	function btnthree()
+	{
+		document.getElementById("disp").value +=3;
+	}
+
+	function btnfour()
+	{
+		document.getElementById("disp").value +=4;
+	}
+
+	function btnfive()
+	{
+		document.getElementById("disp").value +=5;
+	}
+
+	function btnsix()
+	{
+		document.getElementById("disp").value +=6;
+	}
+
+	function btnseven()
+	{
+		document.getElementById("disp").value +=7;
+	}
+
+	function btneight()
+	{
+		document.getElementById("disp").value +=8;
+	}
+
+	function btnnine()
+	{
+		document.getElementById("disp").value +=9;
+	}
+
+	function btnzero()
+	{
+		document.getElementById("disp").value +=0;
+	}
+
+	
+	</script>
+</head>
+<body>
+<div class="panel panel-danger" style="width:25%;margin:auto">
+      		<div class="panel-heading">
+      			<h2 class="panel-title" style="text-align:center">CALCULATOR</h2>
+      		</div>
+      		<div class="panel-body">
+      			<div>
+      				<input type="text" name="" class="form-control" style="height:70px" id="disp" readonly="readonly" class="lead">
+      			</div>
+      			<div >
+      				<table class="table">
+      					<tr>
+      						<td><input type="button" name="" value="1" class="btn btn-danger btn-lg" onclick="btnone()"></td>
+      						<td><input type="button" name="" value="2" class="btn btn-danger btn-lg" onclick="btntwo()"></td>
+      						<td><input type="button" name="" value="3" class="btn btn-danger btn-lg" onclick="btnthree()"></td>
+      						<td><input type="button" name="" value="*" class="btn btn-danger btn-lg" onclick="btntans()"></td>
+
+      					</tr>
+
+      					<tr>
+      						<td><input type="button" name="" value="4" class="btn btn-danger btn-lg" onclick="btnfour()"></td>
+      						<td><input type="button" name="" value="5" class="btn btn-danger btn-lg" onclick="btnfive()"></td>
+      						<td><input type="button" name="" value="6" class="btn btn-danger btn-lg" onclick="btnsix()"></td>
+      						<td><input type="button" name="" value="-" class="btn btn-danger btn-lg" onclick="btnminus()"></td>
+
+      					</tr>
+
+
+      					<tr>
+      						<td><input type="button" name="" value="7" class="btn btn-danger btn-lg" onclick="btnseven()"></td>
+      						<td><input type="button" name="" value="8" class="btn btn-danger btn-lg" onclick="btneight()"></td>
+      						<td><input type="button" name="" value="9" class="btn btn-danger btn-lg" onclick="btnnine()"></td>
+      						<td><input type="button" name="" value="+" class="btn btn-danger btn-lg" onclick="btnplus()"></td>
+
+      					</tr>
+
+      					<tr>
+      						<td><input type="button" name="" value="ON" class="btn btn-danger btn-lg" onclick="btnon()"></td>
+      						<td><input type="button" name="" value="0" class="btn btn-danger btn-lg" onclick="btnzero()"></td>
+      						<td><input type="button" name="" value="=" class="btn btn-danger btn-lg" onclick="btnequals()"></td>
+      						<td><input type="button" name="" value=/ class="btn btn-danger btn-lg" onclick="btndivi()"></td>
+
+      					</tr>
+      					
+      				</table>
+      				
+      			</div>
+      			
+      		</div>
+      		
+      	</div>
+
+</body>
+</html>
